@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-glass">
+    <div class="top-header">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="margin:0;">Daily Progress Tracker</h2>
+            <button id="logoutBtn" class="btn-red">Logout</button>
+        </div>
+        <div class="progress-bar-container">
+            <label style="font-size:14px; color:#bbb;">Study Completion Progress</label>
+            <div style="display:flex; align-items:center; gap:10px;">
+                <progress id="progressBar" value="0" max="100"></progress>
+                <span id="progressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="white-content-area">
+        <div class="task-input-row">
+            <input type="text" id="taskName" placeholder="Enter task description...">
+            
+            <div class="time-inputs">
+                <div class="time-field">
+                    <label>Start:</label>
+                    <input type="datetime-local" id="startTime">
+                </div>
+                <div class="time-field">
+                    <label>End:</label>
+                    <input type="datetime-local" id="endTime">
+                </div>
+            </div>
+
+            <button id="addBtn">Add Task</button>
+            <button id="enableAlarmBtn">🔔 Enable Alarm</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>TASK DESCRIPTION</th>
+                    <th>TIME (START - END)</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody id="taskBody"></tbody>
+        </table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
